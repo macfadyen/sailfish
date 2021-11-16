@@ -292,13 +292,17 @@ fn gaussian_weight(order: usize) -> [f64; 5] {
     }
 }
 
+//fn num_polynomials(order: usize) -> usize {
+//    match order {
+//        1 => 1,
+//        2 => 3,
+//        3 => 6,
+//        4 => 10,
+//        5 => 15,
+//        _ => panic!(),
+//    }
+//}
+
 fn num_polynomials(order: usize) -> usize {
-    match order {
-        1 => 1,
-        2 => 3,
-        3 => 6,
-        4 => 10,
-        5 => 15,
-        _ => panic!(),
-    }
+    order * (order + 1) / 2
 }
