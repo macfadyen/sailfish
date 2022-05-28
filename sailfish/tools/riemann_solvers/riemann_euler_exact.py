@@ -75,21 +75,21 @@ print("Root finder # of iterations: ", result[1].iterations)
 
 # state 2
 p2 = p21 * p1
-a2 = a4 * math.sqrt(
+a2 = a1 * math.sqrt(
     p21 * (((g + 1.0) / (g - 1.0)) + p21) / (1.0 + (g + 1.0) / (g - 1.0) * p21)
 )
 u2 = u4 + 2.0 * a4 / (g - 1.0) * (1.0 - (p21 / p41) ** ((g - 1.0) / (2.0 * g)))
-rho2 = g * p2 / a2 ** 2
+rho2 = g * p2 / a2**2
 
 # shock speed separating states 1 and 2
-u_shock = u4 + a4 * math.sqrt((g + 1.0) / (2.0 * g) * (p21 - 1.0) + 1.0)
+u_shock = u1 + a1 * math.sqrt((g + 1.0) / (2.0 * g) * (p21 - 1.0) + 1.0)
 
 # contact discontinuity between states 2 and 3
 u_cd = u2
 u3 = u2
 p3 = p2
 a3 = 0.5 * (g - 1.0) * (u4 - u3 + 2.0 * a4 / (g - 1.0))
-rho3 = g * p3 / a3 ** 2
+rho3 = g * p3 / a3**2
 
 # Solution inside rarefaction wave
 
